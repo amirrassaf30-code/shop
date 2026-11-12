@@ -1,0 +1,13 @@
+
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "Online Shop",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
