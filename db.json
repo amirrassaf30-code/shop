@@ -1,0 +1,33 @@
+{
+  "settings": {
+    "shop": "فروشگاه موبایل",
+    "phone": "989120000000",
+    "intro": "گوشی و لوازم اصل با ضمانت و ارسال سریع",
+    "adminHash": "a22d99433c1d5a03a84bf3623218c83b:f520d058409c2a8581080840b09a8b80c4fda65335f396161f114ff710eef8625cd650edac35858470a5da32cd648c42375ae7d7ad37c1f634f3a6de724f6f72"
+  },
+  "products": [
+    {
+      "id": "p1",
+      "name": "iPhone 13 - 128GB",
+      "brand": "Apple",
+      "cat": "phone",
+      "price": 35000000,
+      "oldPrice": 37000000,
+      "stock": 3,
+      "img": "https://api2.zoomit.ir/media/2021-9-iphone-13-starlight-front-back-652d2056eb21a6b54f510f21?w=828&q=75",
+      "desc": "سالم، باتری ۹۲٪"
+    },
+    {
+      "id": "p2",
+      "name": "Samsung Galaxy A54",
+      "brand": "Samsung",
+      "cat": "phone",
+      "price": 14500000,
+      "oldPrice": 0,
+      "stock": 5,
+      "img": "",
+      "desc": "رم ۸ گیگ"
+    }
+  ],
+  "orders": []
+}

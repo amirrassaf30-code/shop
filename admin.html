@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>پنل مدیریت</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section id="login" class="login panel" hidden>
+  <h2>ورود مدیر</h2>
+  <form id="loginForm">
+    <label>رمز عبور<input type="password" name="password" required maxlength="200" autocomplete="current-password"></label>
+    <button class="btn" type="submit">ورود</button>
+    <div class="msg" id="loginMsg"></div>
+  </form>
+</section>
+
+<main id="panel" class="adm" hidden>
+  <div class="tools">
+    <h1 style="font-size:20px">مدیریت فروشگاه</h1>
+    <button class="btn sec" id="logoutBtn" style="width:auto">خروج</button>
+  </div>
+
+  <section class="panel">
+    <h2>تنظیمات</h2>
+    <form id="settingsForm" class="two">
+      <label>نام فروشگاه<input name="shop" required maxlength="60"></label>
+      <label>شماره واتساپ (فقط عدد، با کد کشور)<input name="phone" required inputmode="numeric" maxlength="15"></label>
+      <label class="full">متن معرفی<input name="intro" maxlength="200"></label>
+      <label>رمز جدید (اختیاری، حداقل ۱۰ کاراکتر)<input name="newPassword" type="password" minlength="10" maxlength="200" autocomplete="new-password"></label>
+      <div style="align-self:end"><button class="btn" type="submit">ذخیره تنظیمات</button></div>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h2 id="pTitle">افزودن محصول</h2>
+    <form id="pForm" class="two">
+      <input type="hidden" name="id">
+      <label>نام محصول<input name="name" required maxlength="80"></label>
+      <label>برند<input name="brand" maxlength="40"></label>
+      <label>دسته‌بندی
+        <select name="cat">
+          <option value="phone">گوشی موبایل</option>
+          <option value="tablet">تبلت</option>
+          <option value="accessory">لوازم جانبی</option>
+          <option value="charger">شارژر و کابل</option>
+        </select>
+      </label>
+      <label>قیمت (تومان)<input name="price" type="number" required min="0"></label>
+      <label>قیمت قبل از تخفیف<input name="oldPrice" type="number" min="0"></label>
+      <label>موجودی<input name="stock" type="number" required min="0"></label>
+      <label>تصویر (لینک https یا آپلود)<input name="img" placeholder="https://... یا از آپلود استفاده کنید"></label>
+      <label>آپلود تصویر (JPG/PNG/WebP تا ۲ مگابایت)<input type="file" id="imgFile" accept="image/jpeg,image/png,image/webp"></label>
+      <label class="full">توضیحات<input name="desc" maxlength="200"></label>
+      <div class="full" style="display:flex;gap:8px">
+        <button class="btn" type="submit" style="width:auto">ذخیره محصول</button>
+        <button class="btn sec" type="button" id="pReset" style="width:auto">پاک کردن فرم</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h2>محصولات</h2>
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>نام</th><th>قیمت</th><th>موجودی</th><th>عملیات</th></tr></thead>
+        <tbody id="pTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>سفارش‌ها</h2>
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>کد</th><th>تاریخ</th><th>مشتری</th><th>اقلام</th><th>جمع</th><th>وضعیت</th></tr></thead>
+        <tbody id="oTable"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" hidden></div>
+<script src="js/admin.js" defer></script>
+</body>
+</html>

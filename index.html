@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="خرید و فروش گوشی موبایل، تبلت و لوازم جانبی اصل با ضمانت و ارسال سریع">
+<meta name="robots" content="index,follow">
+<title>فروشگاه موبایل</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo" id="shopName">فروشگاه موبایل</div>
+    <input id="search" type="search" placeholder="جستجوی گوشی، برند، لوازم..." autocomplete="off">
+    <button class="cartbtn" id="openCart">🛒 سبد <b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>خرید مطمئن گوشی و لوازم جانبی</h1>
+    <p id="intro"></p>
+    <a class="btn light" style="width:auto;display:inline-block;padding:10px 24px" href="#products">مشاهده محصولات</a>
+    <div class="trust">
+      <span>✅ کالای اصل</span><span>🚚 ارسال سریع</span><span>🛡️ ضمانت بازگشت</span><span>💬 پشتیبانی ۲۴ ساعته</span>
+    </div>
+  </section>
+
+  <div class="chips" id="chips"></div>
+  <section class="grid" id="products"></section>
+
+  <h2 class="sec-title">نظر مشتریان ما</h2>
+  <section class="reviews">
+    <div class="review"><b>علی ر.</b>ارسال خیلی سریع بود و کالا دقیقاً مطابق توضیحات بود.</div>
+    <div class="review"><b>مریم ک.</b>پشتیبانی عالی داشتند و در خرید راهنمایی کردند.</div>
+    <div class="review"><b>حسین م.</b>قیمت مناسب و ضمانت واقعی. حتماً دوباره خرید می‌کنم.</div>
+  </section>
+</main>
+
+<footer>
+  <p id="footName"></p>
+  <p>سفارش از طریق واتساپ ثبت می‌شود. تمام حقوق محفوظ است.</p>
+</footer>
+
+<a class="wa" id="waFloat" target="_blank" rel="noopener">💬 پشتیبانی واتساپ</a>
+
+<div class="modal" id="cartModal" hidden>
+  <div class="box">
+    <h3>سبد خرید</h3>
+    <div id="cartItems"></div>
+    <div class="total"><span>جمع کل</span><span id="cartTotal">0 تومان</span></div>
+    <form id="checkout">
+      <label>نام و نام خانوادگی<input name="name" required maxlength="60"></label>
+      <label>شماره موبایل<input name="phone" required inputmode="tel" placeholder="09123456789" maxlength="15"></label>
+      <label>آدرس کامل<textarea name="address" required rows="2" maxlength="300"></textarea></label>
+      <label>روش پرداخت<select name="pay"><option value="online">پرداخت آنلاین</option><option value="offline">پرداخت در محل / واتساپ</option></select></label>
+      <button class="btn" type="submit">ثبت سفارش</button>
+      <button class="btn sec" type="button" id="closeCart">بستن</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+<script src="js/app.js" defer></script>
+</body>
+</html>
